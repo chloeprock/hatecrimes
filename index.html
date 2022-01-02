@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>20 Years of Hate Crimes in the USA</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+
+            <div id="head">
+                <h1>20 Years of Hate Crimes</h1>
+                <h3>explore data from 1995-2015 on victims of hate crimes in regions of the United States</h3>
+            </div>
+
+            <div id="filter">
+                <h5>Filter by Region</h5>
+
+                <button id="South">South</button>
+                <button id="West">West</button>
+                <button id="Northeast">Northeast</button>
+                <button id="Midwest">Midwest</button>
+            </div>
+            
+            <figure id="chart"></figure>
+        
+            <div id="about"> 
+                <h2>
+                    About the Project
+                </h2>
+
+                <p>
+                    The data in this project was accessed through <a target="blank" href="https://www.kaggle.com/louissebye/united-states-hate-crimes-19912017">kaggle.com</a> and originates from the FBI Crime Data Explorer. 
+                    The data visualized in the line chart has been aggregated from the data downloaded in order to provide a summary of the total victims of hate crimes in each region for the years 1995-2015. 
+                    Because the dataset available for download is very large, utilizing a summary of the data allows for the creation of a more readable visualization. 
+                </p>
+
+                <p>
+                    In this visualization, the x-axis encodes years, while the y-axis encodes the total number of victims. 
+                    You can view the data in 4 slices based on the regions included in the data (South, West, Northeast, and Midwest). 
+                    The goal of the visualization is to enable comparisons: 
+                        <ol>
+                            <li>
+                                within each data slice, between number of victims per year for each of the 4 US regions
+                            </li>
+                            <li>
+                                between the data slices, of the number of victims in different regions in the US.
+                            </li>
+                        </ol>  
+                </p>
+
+                <p>
+                    Each circle in the visualization represents one year of data. When hovering over a circle, a tooltip appears to provide information 
+                    on the total number of victims of a hate crime that year. 
+                </p>
+
+                <p>
+                    Some observations made from this visualization are: 
+                        <ul>
+                            <li>
+                                The year 2001 represents a peak in victims of a hate crime across all 4 regions in the USA. 
+                                In the Northeast only, there is a peak of almost the same size that occurs a few years earlier, in 1996. 
+                            </li>
+                            <li>
+                                The number of victims in the West is much higher than the other 3 regions.
+                            </li>
+                            <li>
+                                There was a decrease in the number of hate crimes from 2008 to 2009 across all 4 regions. 
+                            </li>
+                            <li>
+                                In the South, West, and Northeast, the year 2014 had the lowest number of victims of a hate crime 
+                                (relative to each region).
+                            </li>
+                            <li>
+                                In the Midwest, the lowest number of victims was during the year 2015. 
+                            </li>
+                        </ul>
+                </p>
+                <h4>
+                    Next Steps
+                </h4>
+                <p>
+                    It is important to note that this data has not been normalized to account for region populations. In the future, it would be interesting to
+                    combine the current dataset with census information in order to get a clearer picture of what regions in the US have not just the 
+                    highest number of total victims of a hate crime, but have the most hate crimes proportional to their population. 
+                </p>
+
+
+                
+
+            </div>
+
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
